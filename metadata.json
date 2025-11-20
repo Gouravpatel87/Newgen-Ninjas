@@ -1,0 +1,7 @@
+{
+  "name": "GuardianAI: Disaster Management",
+  "description": "Comprehensive natural disaster analysis, AQI monitoring, and safety planning powered by Gemini.",
+  "requestFramePermissions": [
+    "geolocation"
+  ]
+}
