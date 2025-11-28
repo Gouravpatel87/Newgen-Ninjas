@@ -4,9 +4,16 @@ import SearchForm from './components/SearchForm';
 import Dashboard from './components/Dashboard';
 import { DisasterReport, AppState } from './types';
 import { analyzeLocationRisks } from './services/geminiService';
-import { AlertCircle } from 'lucide-react';
+// Temporary replacement for AlertCircle icon
+const AlertCircle = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="12" y1="8" x2="12" y2="12"></line>
+    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+  </svg>
+);
 
-const App: React.FC = () => {
+const App = () => {
   const [appState, setAppState] = useState<AppState>(AppState.IDLE);
   const [report, setReport] = useState<DisasterReport | null>(null);
   const [error, setError] = useState<string | null>(null);

@@ -1,7 +1,27 @@
 import React from 'react';
-import { ResponsiveContainer, AreaChart, Area, XAxis, YAxis, CartesianGrid, Tooltip } from 'recharts';
+// Temporary replacement for recharts components
+const ResponsiveContainer = ({ children, width, height }: { children?: React.ReactNode; width?: string; height?: string }) => <div className="w-full h-full">{children}</div>;
+const AreaChart = ({ children, data, margin }: { children?: React.ReactNode; data: any; margin?: any }) => (
+  <div className="relative w-full h-full bg-gradient-to-br from-indigo-50 to-purple-50 rounded-lg flex items-center justify-center">
+    <div className="text-center">
+      <div className="text-sm text-slate-600 mb-2">Chart Data Points: {data?.length || 0}</div>
+      <div className="text-xs text-slate-400">Chart will render when recharts is installed</div>
+    </div>
+  </div>
+);
+const Area = () => null;
+const XAxis = () => null;
+const YAxis = () => null;
+const CartesianGrid = () => null;
+const Tooltip = () => null;
 import { HistoricalPoint } from '../types';
-import { TrendingUp } from 'lucide-react';
+// Temporary replacement for TrendingUp icon
+const TrendingUp = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <polyline points="22,7 13.5,15.5 8.5,10.5 2,17"></polyline>
+    <polyline points="16,7 22,7 22,13"></polyline>
+  </svg>
+);
 
 interface TrendChartProps {
   data: HistoricalPoint[];

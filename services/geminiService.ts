@@ -1,7 +1,10 @@
 import { GoogleGenAI, Type } from "@google/genai";
 import { DisasterReport } from "../types";
 
-const apiKey = process.env.API_KEY;
+// Declare process for environment variables
+declare const process: { env: { GEMINI_API_KEY?: string } };
+
+const apiKey = process.env.GEMINI_API_KEY;
 
 // We use the recommended model for complex JSON tasks
 const modelName = "gemini-2.5-flash";

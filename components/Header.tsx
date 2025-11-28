@@ -1,5 +1,12 @@
 import React from 'react';
-import { ShieldAlert } from 'lucide-react';
+// Temporary replacement for ShieldAlert icon
+const ShieldAlert = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+    <path d="M12 8v4"></path>
+    <path d="M12 16h.01"></path>
+  </svg>
+);
 
 const Header: React.FC = () => {
   return (

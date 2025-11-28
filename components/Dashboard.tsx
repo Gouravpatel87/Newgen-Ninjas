@@ -4,7 +4,13 @@ import AQIMonitor from './AQIMonitor';
 import RiskAnalysis from './RiskAnalysis';
 import TrendChart from './TrendChart';
 import SafetyPlan from './SafetyPlan';
-import { MapPin } from 'lucide-react';
+// Temporary replacement for MapPin icon
+const MapPin = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+    <circle cx="12" cy="10" r="3"></circle>
+  </svg>
+);
 
 interface DashboardProps {
   data: DisasterReport | null;

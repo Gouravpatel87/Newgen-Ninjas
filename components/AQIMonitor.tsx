@@ -1,5 +1,27 @@
 import React from 'react';
-import { Wind, AlertCircle, CheckCircle, Radio } from 'lucide-react';
+// Temporary replacement for lucide-react icons
+const Wind = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path d="M17.7 7.7a2.5 2.5 0 1 1 1.8 4.3H2"></path>
+    <path d="M9.6 4.6A2 2 0 1 1 11 8H2"></path>
+    <path d="M12.6 19.4A2 2 0 1 0 14 16H2"></path>
+  </svg>
+);
+
+const AlertCircle = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <circle cx="12" cy="12" r="10"></circle>
+    <line x1="12" y1="8" x2="12" y2="12"></line>
+    <line x1="12" y1="16" x2="12.01" y2="16"></line>
+  </svg>
+);
+
+const CheckCircle = ({ className }: { className?: string }) => (
+  <svg className={className} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+    <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
+    <polyline points="22,4 12,14.01 9,11.01"></polyline>
+  </svg>
+);
 import { AQIData } from '../types';
 
 interface AQIMonitorProps {
